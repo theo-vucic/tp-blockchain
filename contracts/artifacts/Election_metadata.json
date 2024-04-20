@@ -1,0 +1,309 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "_resolutionId",
+						"type": "uint256"
+					}
+				],
+				"name": "votedEvent",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "addResolution",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_resolutionId",
+						"type": "uint256"
+					}
+				],
+				"name": "endvote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "resolutions",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "presidentSeance",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "scrutateur",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "secretaire",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nbrPour",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nbrNeutre",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nbrContre",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "resultat",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "resolutionsCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "nbrPour",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nbrNeutre",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nbrContre",
+						"type": "uint256"
+					}
+				],
+				"name": "result",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_resolutionId",
+						"type": "uint256"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "voteEnding",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voters",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "vote",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "typevote",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TP_Election-master/contracts/Election.sol": "Election"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TP_Election-master/contracts/Election.sol": {
+			"keccak256": "0xab7f5152a6bf0ca6893340544688ec0236710436174ca50b5a1e8ebaa6fe9def",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1de9f9bc4f0fcaaf03dc0a86276629e143f9fc63e7784456eb318fb3176ec8f2",
+				"dweb:/ipfs/QmchUzdTNyHjQD958xGyhKbabZstDRdwpDRmeKceHJ7B15"
+			]
+		},
+		"TP_Election-master/contracts/Ownable.sol": {
+			"keccak256": "0x7c6d4cce66332e8de94ddb5fc73b4e3a68be064d330a60b8a180c8b07cdbcfff",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8036371967e4b039d3b1e16de07a5f67ead80ef1a2adad962db04215483524da",
+				"dweb:/ipfs/QmRAdyQ9ZtTj2dDx7Q1bE5H9BjWgPoWf3WFsS9QwzJxaji"
+			]
+		},
+		"TP_Election-master/contracts/SafeMath.sol": {
+			"keccak256": "0xba951f55d51d6eb9ecf1b529f1e9a2dacfdda0354eb25a5fdf48c3740d31eed9",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://17ada29a14e898a030c1b2494574f883f0b440317574f4b8b948671a425e677a",
+				"dweb:/ipfs/QmXTanKPV2bv7mK2Tp42GtqcCp8KG2u6NHswXA9KitfMMV"
+			]
+		}
+	},
+	"version": 1
+}
